@@ -53,7 +53,7 @@ After forking this repo to your own github:
 ```bash
 # Clone your own fork of this repo (assuming home here `~/`)
 cd
-git clone https://github.com/<YOUR_GITHUB_USERNAME>/ME5413_Planning_Project.git
+git clone https://github.com/Maxwell-00/ME5413_Planning_Project.git
 cd ME5413_Planning_Project
 
 # Install all dependencies
