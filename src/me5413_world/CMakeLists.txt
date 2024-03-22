@@ -41,6 +41,7 @@ include_directories(
   include
   ${catkin_INCLUDE_DIRS}
   ${dynamic_reconfigure_PACKAGE_PATH}/cmake/cfgbuild.cmake
+  ${CMAKE_CURRENT_SOURCE_DIR}/include/me5413_world
 )
 
 # Add Nodes
@@ -48,6 +49,6 @@ add_executable(path_publisher_node src/path_publisher_node.cpp)
 target_link_libraries(path_publisher_node ${catkin_LIBRARIES})
 add_dependencies(path_publisher_node ${catkin_EXPORTED_TARGETS} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${PROJECT_NAME}_gencfg)
 
-add_executable(path_tracker_node src/path_tracker_node.cpp)
+add_executable(path_tracker_node src/path_tracker_node.cpp src/pure_pursuit.cpp)
 target_link_libraries(path_tracker_node ${catkin_LIBRARIES})
 add_dependencies(path_tracker_node ${catkin_EXPORTED_TARGETS} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${PROJECT_NAME}_gencfg)
